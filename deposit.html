@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+
+        name="viewport"
+
+        content="width=device-width, initial-scale=1.0"
+
+    >
+
+    <title>Deposit | CitiyMobile</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="page-header">
+
+        <a href="dashboard.html" class="back">‹</a>
+
+        <div class="brand">
+
+            <img src="logo.jpg" alt="CitiyMobile">
+
+            <span>Citiy Bank</span>
+
+        </div>
+
+    </header>
+
+    <main class="page-content">
+
+        <h1>Deposit</h1>
+
+        <p class="subtitle">
+
+            Add funds to your demo account
+
+        </p>
+
+        <div class="form-card">
+
+            <form id="depositForm">
+
+                <label>Deposit To</label>
+
+                <select id="depositAccount" required>
+
+                    <option value="">
+
+                        Select account
+
+                    </option>
+
+                    <option value="Joint Account">
+
+                        Joint Account — $2,100,000.00
+
+                    </option>
+
+                    <option value="Savings Account">
+
+                        Savings Account — $1,000,000.00
+
+                    </option>
+
+                </select>
+
+                <label>Amount</label>
+
+                <div class="money-input">
+
+                    <span>$</span>
+
+                    <input
+
+                        type="number"
+
+                        id="depositAmount"
+
+                        placeholder="0.00"
+
+                        min="1"
+
+                        step="0.01"
+
+                        required
+
+                    >
+
+                </div>
+
+                <label>Description</label>
+
+                <input
+
+                    type="text"
+
+                    id="depositDescription"
+
+                    placeholder="Optional description"
+
+                >
+
+                <button type="submit" class="main-button">
+
+                    Deposit
+
+                </button>
+
+            </form>
+
+
+    </main>
+
+    <nav class="bottom-nav">
+
+        <a href="dashboard.html">
+
+            <span>⌂</span>
+
+            <small>Home</small>
+
+        </a>
+
+        <a href="account.html">
+
+            <span>◯</span>
+
+            <small>Account</small>
+
+        </a>
+
+        <a href="transactions.html">
+
+            <span>↔</span>
+
+            <small>Transactions</small>
+
+        </a>
+
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

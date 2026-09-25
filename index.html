@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+
+        name="viewport"
+
+        content="width=device-width, initial-scale=1.0"
+
+    >
+
+    <!-- PWA / Android theme -->
+
+    <meta
+
+        name="theme-color"
+
+        content="#063b82"
+
+    >
+
+    <meta
+
+        name="mobile-web-app-capable"
+
+        content="yes"
+
+    >
+
+    <meta
+
+        name="apple-mobile-web-app-capable"
+
+        content="yes"
+
+    >
+
+    <meta
+
+        name="apple-mobile-web-app-status-bar-style"
+
+        content="default"
+
+    >
+<meta name="theme-color" content="#063b82">
+
+<link rel="manifest" href="./manifest.json">
+
+<link
+
+    rel="apple-touch-icon"
+
+    href="./icon-192.png"
+
+>
+    <meta
+
+        name="apple-mobile-web-app-title"
+
+        content="citiymobile"
+
+    >
+
+    <title>
+
+        citiymobile bank — Sign In
+
+    </title>
+
+    <!-- PWA MANIFEST -->
+
+    <link
+
+        rel="manifest"
+
+        href="./manifest.json"
+
+    >
+
+    <!-- iPhone/iPad app icon -->
+
+    <link
+
+        rel="apple-touch-icon"
+
+        href=".//icon-192.png"
+
+    >
+
+    <!-- Website stylesheet -->
+
+    <link
+
+        rel="stylesheet"
+
+        href="./style.css"
+
+    >
+
+</head>
+
+<body class="login-screen">
+
+    <main class="login-page">
+
+        <!-- INSTALL APP -->
+
+        <button
+
+            id="installBtn"
+
+            class="install-btn"
+
+            type="button"
+
+        >
+
+            <span>↓</span>
+
+            <span>
+
+                Install App
+
+            </span>
+
+        </button>
+
+        <!-- BRAND -->
+
+        <div class="login-brand">
+
+            <div class="login-logo">
+
+                <img
+
+                    src="./logo.jpg"
+
+                    alt="citiymobile bank logo"
+
+                    onerror="this.style.display='none';"
+
+                >
+
+            </div>
+
+            <h1>
+
+                Citiy Bank
+
+            </h1>
+
+
+            <p>
+
+                Better Banking. A Brighter Future.
+
+            </p>
+
+        </div>
+
+        <!-- WELCOME -->
+
+        <section class="login-welcome">
+
+            <h2>
+
+                Welcome Back
+
+            </h2>
+
+            <p>
+
+                Sign in to your citiymobile account
+
+            </p>
+
+        </section>
+
+        <!-- LOGIN -->
+
+        <section class="login-box">
+
+            <form id="loginForm">
+
+                <div class="login-input">
+
+                    <span class="field-icon">
+
+                        ✉
+
+                    </span>
+
+                    <input
+
+                        type="email"
+
+                        id="email"
+
+                        placeholder="Email or Username"
+
+                        autocomplete="username"
+
+                        required
+
+                    >
+
+                </div>
+
+                <div class="login-input">
+
+                    <span class="field-icon">
+
+                        ♙
+
+                    </span>
+
+                    <input
+
+                        type="password"
+
+                        id="password"
+
+                        placeholder="Password"
+
+                        autocomplete="current-password"
+
+                        required
+
+                    >
+
+                    <button
+
+                        type="button"
+
+                        id="passwordToggle"
+
+                        class="eye-button"
+
+                    >
+
+                        ◉
+
+                    </button>
+
+                </div>
+
+                <button
+
+                    type="submit"
+
+                    class="sign-in-button"
+
+                >
+
+                    Sign In
+
+                </button>
+
+                <p
+
+                    id="loginMessage"
+
+                    class="login-error"
+
+                ></p>
+
+                <button
+
+                    type="button"
+
+                    class="forgot-button"
+
+                    onclick="forgotPassword()"
+
+                >
+
+                    Forgot password?
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- FOOTER -->
+
+        <div class="login-footer">
+
+            <div class="footer-line"></div>
+
+            <div class="footer-links">
+
+                <span>
+
+                    Secure
+
+                </span>
+
+                <b>•</b>
+
+                <span>
+
+                    Simple
+
+                </span>
+
+                <b>•</b>
+
+                <span>
+
+                    Always
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- EDUCATIONAL NOTICE -->
+
+        <div class="educational-label">
+
+            
+
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
+

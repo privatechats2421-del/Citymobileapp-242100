@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+
+        name="viewport"
+
+        content="width=device-width, initial-scale=1.0"
+
+    >
+
+    <meta
+
+        name="theme-color"
+
+        content="#063b82"
+
+    >
+
+    <title>citiymobile bank — Verify Transfer</title>
+
+    <link
+
+        rel="manifest"
+
+        href="./manifest.json"
+
+    >
+
+    <link
+
+        rel="stylesheet"
+
+        href="./style.css"
+
+    >
+
+</head>
+
+<body class="verification-page">
+
+    <!-- HEADER -->
+
+    <header class="verification-header">
+
+        <div class="verification-brand">
+
+            <div class="verification-logo">
+
+                <img
+
+                    src="./logo.jpg"
+
+                    alt="citiymobile bank"
+
+                >
+
+            </div>
+
+            <strong>Citiy Bank</strong>
+
+        </div>
+
+        <button
+
+            class="menu-button"
+
+            type="button"
+
+        >
+
+            ☰
+
+        </button>
+
+    </header>
+
+    <!-- CONTENT -->
+
+    <main class="verification-content">
+
+        <section class="verification-card">
+
+            <!-- STEP INDICATOR -->
+
+            <div class="demo-step-counter">
+
+                Step <span id="stepNumber">1</span> of 5
+
+            </div>
+
+            <!-- SECURITY ICON -->
+
+            <div class="security-circle">
+
+                ✓
+
+            </div>
+
+            <!-- TITLE -->
+
+            <h1 id="verificationTitle">
+
+                Verify Your ATC-Code For This Transfer
+
+            </h1>
+
+            <p
+
+                class="verification-subtitle"
+
+                id="verificationSubtitle"
+
+            >
+
+                Enter the verification code sent to your registered contact.
+
+            </p>
+
+            <!-- TRANSFER SUMMARY -->
+
+            <div class="sending-box">
+
+                <span>
+
+                    Sending to
+
+                </span>
+
+                <div>
+
+                    <strong id="verifyRecipient">
+
+                        Recipient
+
+                    </strong>
+
+                    <strong id="verifyAmount">
+
+                        $0.00
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <!-- VERIFICATION CODE -->
+
+            <div class="verification-field">
+
+                <label for="verificationCode">
+
+                    <span id="codeLabel">
+
+                        ATC-Code
+
+                    </span>
+
+                </label>
+
+                <div class="otp-input-wrapper">
+
+                    <span>
+
+                        ♙
+
+                    </span>
+
+                    <input
+
+                        type="text"
+
+                        id="verificationCode"
+
+                        maxlength="6"
+
+                        inputmode="numeric"
+
+                        autocomplete="one-time-code"
+
+                        placeholder="6-digit code"
+
+                    >
+
+                </div>
+
+            </div>
+
+            <!-- VERIFY -->
+
+            <button
+
+                id="verifyButton"
+
+                class="verify-button"
+
+                type="button"
+
+            >
+
+                Verify Code
+
+            </button>
+
+            <p
+
+                id="verificationMessage"
+
+                class="verification-message"
+
+            ></p>
+
+        </section>
+
+        <!-- EDUCATIONAL NOTICE -->
+
+        <div class="verification-demo-notice">
+
+            
+
+        </div>
+
+    </main>
+
+    <!-- BOTTOM NAV -->
+
+    <nav class="verification-bottom-nav">
+
+        <a href="dashboard.html">
+
+            <span>⌂</span>
+
+            <small>Home</small>
+
+        </a>
+
+        <a href="transfer.html">
+
+            <span>⇄</span>
+
+            <small>Transfer</small>
+
+        </a>
+
+        <a href="dashboard.html">
+
+            <span>♙</span>
+
+            <small>Account</small>
+
+        </a>
+
+    </nav>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

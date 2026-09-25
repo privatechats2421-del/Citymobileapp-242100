@@ -1,0 +1,3167 @@
+
+/* =========================================================
+
+   CITiYMOBILE BANK
+
+   MAIN STYLESHEET
+
+   Fictional educational banking UI
+
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family:
+
+        -apple-system,
+
+        BlinkMacSystemFont,
+
+        "Segoe UI",
+
+        Roboto,
+
+        Arial,
+
+        sans-serif;
+
+    color: #101b2d;
+
+    background: #f5f7fa;
+
+}
+
+button,
+
+input,
+
+select {
+
+    font: inherit;
+
+}
+
+button,
+
+a {
+
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+button {
+
+    cursor: pointer;
+
+}
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+/* =========================================================
+
+   LOGIN PAGE
+
+========================================================= */
+
+.login-screen {
+
+    min-height: 100vh;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #0a4b9b 0%,
+
+            #073a7d 48%,
+
+            #052d61 100%
+
+        );
+
+    overflow-x: hidden;
+
+}
+
+.login-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 22px 18px 30px;
+
+    position: relative;
+
+}
+
+/* Decorative background */
+
+.login-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.07);
+
+    top: -180px;
+
+    right: -150px;
+
+}
+
+.login-page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(0,157,255,0.15);
+
+    bottom: -130px;
+
+    left: -180px;
+
+}
+
+/* Install button */
+
+.install-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-width: 145px;
+
+    height: 42px;
+
+    padding: 0 18px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,0.12);
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    backdrop-filter: blur(12px);
+
+    margin-bottom: 22px;
+
+    position: relative;
+
+    z-index: 3;
+
+    transition: 0.2s ease;
+
+}
+
+.install-btn:hover {
+
+    background: rgba(255,255,255,0.2);
+
+    transform: translateY(-1px);
+
+}
+
+.install-btn:disabled {
+
+    opacity: 0.7;
+
+    cursor: default;
+
+}
+
+/* Login branding */
+
+.login-brand {
+
+    text-align: center;
+
+    color: white;
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 25px;
+
+}
+
+.login-logo {
+
+    width: 74px;
+
+    height: 74px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+
+        0 12px 30px rgba(0,0,0,0.2);
+
+}
+
+.login-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 7px;
+
+}
+
+.login-brand h1 {
+
+    font-size: 29px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+}
+
+.login-brand > span {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    opacity: 0.9;
+
+    margin-top: 1px;
+
+}
+
+.login-brand p {
+
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    opacity: 0.85;
+
+}
+
+/* Welcome */
+
+.login-welcome {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    color: white;
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 13px;
+
+}
+
+.login-welcome h2 {
+
+    font-size: 29px;
+
+    font-weight: 750;
+
+    margin-bottom: 5px;
+
+}
+
+.login-welcome p {
+
+    font-size: 14px;
+
+    opacity: 0.88;
+
+}
+
+/* Login box */
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: rgba(255,255,255,0.98);
+
+    border-radius: 18px;
+
+    padding: 23px 18px;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+
+        0 22px 55px rgba(0,0,0,0.23);
+
+}
+
+/* Inputs */
+
+.login-input {
+
+    width: 100%;
+
+    height: 51px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    border: 1px solid #d8e0e9;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    margin-bottom: 14px;
+
+    transition: 0.2s ease;
+
+}
+
+.login-input:focus-within {
+
+    border-color: #1166b9;
+
+    box-shadow:
+
+        0 0 0 3px rgba(17,102,185,0.09);
+
+}
+
+.field-icon {
+
+    width: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #0a478f;
+
+    font-size: 16px;
+
+}
+
+.login-input input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    padding: 0 10px 0 0;
+
+    color: #152238;
+
+    font-size: 13px;
+
+}
+
+.login-input input::placeholder {
+
+    color: #7b8797;
+
+}
+
+.eye-button {
+
+    width: 42px;
+
+    height: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #174d87;
+
+    font-size: 15px;
+
+}
+
+/* Sign in */
+
+.sign-in-button {
+
+    width: 100%;
+
+    height: 51px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #075ab2,
+
+            #0874cf
+
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-top: 3px;
+
+    box-shadow:
+
+        0 8px 18px rgba(5,91,177,0.22);
+
+    transition: 0.2s ease;
+
+}
+
+.sign-in-button:hover {
+
+    transform: translateY(-1px);
+
+}
+
+.sign-in-button:active {
+
+    transform: scale(0.99);
+
+}
+
+.login-error {
+
+    min-height: 18px;
+
+    text-align: center;
+
+    color: #c33b3b;
+
+    font-size: 12px;
+
+    margin-top: 10px;
+
+}
+
+/* Forgot password */
+
+.forgot-button {
+
+    display: block;
+
+    margin: 9px auto 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #0755a3;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+}
+
+/* Login footer */
+
+.login-footer {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 30px;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+.footer-line {
+
+    width: 65%;
+
+    height: 1px;
+
+    margin: 0 auto 15px;
+
+    background: rgba(255,255,255,0.3);
+
+}
+
+.footer-links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    font-size: 11px;
+
+    opacity: 0.9;
+
+}
+
+.footer-links b {
+
+    opacity: 0.6;
+
+}
+
+.educational-label {
+
+    max-width: 430px;
+
+    margin-top: 17px;
+
+    position: relative;
+
+    z-index: 2;
+
+    color: rgba(255,255,255,0.7);
+
+    text-align: center;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+}
+
+/* =========================================================
+
+   SHARED BANK HEADER
+
+========================================================= */
+
+.dashboard-topbar,
+
+.transfer-header,
+
+.verification-header {
+
+    height: 78px;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    background: #073b80;
+
+    color: white;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+
+    box-shadow:
+
+        0 2px 10px rgba(0,0,0,0.08);
+
+}
+
+.dashboard-brand,
+
+.verification-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+.dashboard-brand strong,
+
+.verification-brand strong {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+
+}
+
+.dashboard-brand > span,
+
+.verification-brand > span {
+
+    font-size: 12px;
+
+    opacity: 0.8;
+
+    align-self: flex-end;
+
+    margin-bottom: 8px;
+
+}
+
+.small-logo,
+
+.verification-logo {
+
+    width: 43px;
+
+    height: 43px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+.small-logo img,
+
+.verification-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.logout-button {
+
+    width: 46px;
+
+    height: 46px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background: rgba(255,255,255,0.1);
+
+    font-size: 23px;
+
+}
+
+.logout-button:hover {
+
+    background: rgba(255,255,255,0.18);
+
+}
+
+/* =========================================================
+
+   DASHBOARD
+
+========================================================= */
+
+.bank-dashboard {
+
+    min-height: 100vh;
+
+    background: #f5f7fa;
+
+    padding-bottom: 88px;
+
+}
+
+.dashboard-content {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 25px 22px 35px;
+
+    position: relative;
+
+}
+
+/* Greeting */
+
+.greeting {
+
+    margin-bottom: 26px;
+
+}
+
+.greeting p {
+
+    color: #6c7788;
+
+    font-size: 18px;
+
+    margin-bottom: 3px;
+
+}
+
+.greeting h1 {
+
+    color: #101a2d;
+
+    font-size: 32px;
+
+    line-height: 1.15;
+
+    margin-bottom: 6px;
+
+    letter-spacing: -1px;
+
+}
+
+.greeting span {
+
+    color: #707b8c;
+
+    font-size: 16px;
+
+}
+
+/* Chat edit */
+
+.chat-edit {
+
+    position: absolute;
+
+    right: 22px;
+
+    top: 74px;
+
+    height: 56px;
+
+    padding: 0 28px;
+
+    border: 0;
+
+    border-radius: 17px;
+
+    background: #303030;
+
+    color: white;
+
+    font-size: 15px;
+
+    box-shadow:
+
+        0 6px 14px rgba(0,0,0,0.2);
+
+}
+
+.chat-edit:hover {
+
+    background: #202020;
+
+}
+
+/* Balance card */
+
+.balance-card {
+
+    width: 100%;
+
+    border-radius: 23px;
+
+    padding: 29px 28px;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #08428f,
+
+            #0761bd 55%,
+
+            #1672cc
+
+        );
+
+    box-shadow:
+
+        0 13px 28px rgba(5,61,125,0.2);
+
+    margin-bottom: 27px;
+
+}
+
+.balance-card > p {
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+
+}
+
+.balance-card > h2 {
+
+    font-size: 42px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 28px;
+
+}
+
+/* Mini accounts */
+
+.account-cards {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+}
+
+.mini-card {
+
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 16px;
+
+    padding: 17px;
+
+    min-height: 108px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.mini-card span {
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 15px;
+
+    margin-bottom: 7px;
+
+}
+
+.mini-card strong {
+
+    font-size: 22px;
+
+    margin-bottom: 3px;
+
+}
+
+.mini-card small {
+
+    color: rgba(255,255,255,0.6);
+
+    font-size: 12px;
+
+}
+
+/* Quick actions */
+
+.quick-actions {
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(4, 1fr);
+
+    gap: 13px;
+
+    margin: 0 4px 31px;
+
+}
+
+.quick-action {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #404b5b;
+
+    font-size: 15px;
+
+    gap: 8px;
+
+}
+
+.action-circle {
+
+    width: 66px;
+
+    height: 66px;
+
+    border-radius: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 26px;
+
+    box-shadow:
+
+        0 7px 15px rgba(0,0,0,0.08);
+
+}
+
+.action-circle.blue {
+
+    background: #0872c7;
+
+}
+
+.action-circle.green {
+
+    background: #1ab784;
+
+}
+
+.action-circle.purple {
+
+    background: #655ee0;
+
+}
+
+.action-circle.red {
+
+    background: #ed4769;
+
+}
+
+/* Recent transactions */
+
+.recent-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 17px;
+
+}
+
+.recent-header h2 {
+
+    font-size: 21px;
+
+    color: #141e30;
+
+}
+
+.recent-header button {
+
+    border: 0;
+
+    background: transparent;
+
+    color: #075997;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+/* Transaction card */
+
+.transaction-container {
+
+    background: white;
+
+    border: 1px solid #e5e9ee;
+
+    border-radius: 19px;
+
+    overflow: hidden;
+
+    box-shadow:
+
+        0 3px 13px rgba(0,0,0,0.03);
+
+}
+
+.transaction-row {
+
+    min-height: 82px;
+
+    padding: 14px 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom: 1px solid #edf0f3;
+
+}
+
+.transaction-row:last-child {
+
+    border-bottom: 0;
+
+}
+
+.transaction-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #edf5fc;
+
+    color: #0865b1;
+
+}
+
+.transaction-info {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+.transaction-info strong {
+
+    font-size: 13px;
+
+    color: #182337;
+
+}
+
+.transaction-info span {
+
+    font-size: 11px;
+
+    color: #8993a1;
+
+}
+
+.positive {
+
+    color: #12845c;
+
+    font-size: 13px;
+
+}
+
+.negative {
+
+    color: #c64250;
+
+    font-size: 13px;
+
+}
+
+/* Dashboard notice */
+
+.dashboard-demo-notice,
+
+.transfer-demo-notice,
+
+.verification-demo-notice {
+
+    text-align: center;
+
+    color: #7a8594;
+
+    font-size: 9px;
+
+    margin-top: 22px;
+
+}
+
+.dashboard-demo-notice p {
+
+    margin-top: 4px;
+
+}
+
+/* =========================================================
+
+   BOTTOM NAVIGATION
+
+========================================================= */
+
+.bottom-nav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 76px;
+
+    background: rgba(255,255,255,0.97);
+
+    border-top: 1px solid #e1e6ec;
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(5, 1fr);
+
+    align-items: center;
+
+    z-index: 50;
+
+    backdrop-filter: blur(12px);
+
+}
+
+.nav-item {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #8993a0;
+
+}
+
+.nav-item span {
+
+    font-size: 24px;
+
+    line-height: 1;
+
+}
+
+.nav-item small {
+
+    font-size: 10px;
+
+}
+
+.nav-item.active {
+
+    color: #075b9f;
+
+    font-weight: 700;
+
+}
+
+/* =========================================================
+
+   TRANSFER PAGE
+
+========================================================= */
+
+.transfer-page {
+
+    min-height: 100vh;
+
+    background: #f5f7fa;
+
+    padding-bottom: 90px;
+
+}
+
+.transfer-header {
+
+    background: #073b80;
+
+}
+
+.transfer-edit {
+
+    position: static;
+
+    height: 45px;
+
+    padding: 0 20px;
+
+    border-radius: 13px;
+
+    font-size: 13px;
+
+}
+
+.transfer-content {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 28px 22px 40px;
+
+}
+
+.transfer-title {
+
+    margin-bottom: 26px;
+
+}
+
+.transfer-title h1 {
+
+    color: #101a2c;
+
+    font-size: 31px;
+
+    letter-spacing: -0.7px;
+
+    margin-bottom: 6px;
+
+}
+
+.transfer-title p {
+
+    color: #697586;
+
+    font-size: 16px;
+
+}
+
+/* Tabs */
+
+.transfer-tabs {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 3px;
+
+    background: #eef0f3;
+
+    border-radius: 12px;
+
+    margin-bottom: 28px;
+
+}
+
+.transfer-tab {
+
+    height: 42px;
+
+    border: 0;
+
+    background: transparent;
+
+    border-radius: 9px;
+
+    color: #6d7480;
+
+    font-weight: 500;
+
+}
+
+.transfer-tab.active {
+
+    background: white;
+
+    color: #171717;
+
+    box-shadow:
+
+        0 2px 6px rgba(0,0,0,0.08);
+
+}
+
+/* Transfer form */
+
+.transfer-form {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    border: 1px solid #e7ebef;
+
+    box-shadow:
+
+        0 4px 15px rgba(0,0,0,0.03);
+
+}
+
+.form-field {
+
+    margin-bottom: 21px;
+
+}
+
+.form-field label {
+
+    display: block;
+
+    color: #171c25;
+
+    font-size: 16px;
+
+    font-weight: 650;
+
+    margin-bottom: 9px;
+
+}
+
+.form-field input,
+
+.form-field select {
+
+    width: 100%;
+
+    height: 60px;
+
+    border: 1px solid #dce1e6;
+
+    border-radius: 10px;
+
+    outline: 0;
+
+    background: white;
+
+    color: #6c737e;
+
+    padding: 0 17px;
+
+    font-size: 16px;
+
+    transition: 0.2s ease;
+
+}
+
+.form-field input:focus,
+
+.form-field select:focus {
+
+    border-color: #1970bd;
+
+    box-shadow:
+
+        0 0 0 3px rgba(25,112,189,0.08);
+
+}
+
+.form-field input::placeholder {
+
+    color: #8c9299;
+
+}
+
+.two-columns {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 17px;
+
+}
+
+/* Amount */
+
+.amount-input {
+
+    position: relative;
+
+}
+
+.amount-input > span {
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #4e5969;
+
+    font-size: 17px;
+
+    z-index: 2;
+
+}
+
+.amount-input input {
+
+    padding-left: 38px;
+
+}
+
+/* Continue */
+
+.continue-transfer {
+
+    width: 100%;
+
+    height: 57px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #075cae,
+
+            #0873c8
+
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin-top: 3px;
+
+    box-shadow:
+
+        0 8px 17px rgba(5,91,177,0.17);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+.continue-transfer span {
+
+    font-size: 21px;
+
+}
+
+/* =========================================================
+
+   VERIFICATION PAGE
+
+========================================================= */
+
+.verification-page {
+
+    min-height: 100vh;
+
+    background: #f3f8fc;
+
+    padding-bottom: 95px;
+
+}
+
+.verification-header {
+
+    background: white;
+
+    color: #102039;
+
+    border-bottom: 1px solid #e0e8ef;
+
+    box-shadow: none;
+
+}
+
+.verification-brand strong {
+
+    color: #102039;
+
+}
+
+.verification-brand > span {
+
+    color: #667489;
+
+}
+
+.menu-button {
+
+    width: 44px;
+
+    height: 44px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #102039;
+
+    font-size: 23px;
+
+}
+
+/* Verification content */
+
+.verification-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 50px 32px 30px;
+
+}
+
+.verification-card {
+
+    background: rgba(255,255,255,0.65);
+
+    border: 1px solid #cbddeb;
+
+    border-radius: 13px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow:
+
+        0 3px 10px rgba(25,67,100,0.08);
+
+}
+
+/* Security icon */
+
+.security-circle {
+
+    width: 114px;
+
+    height: 114px;
+
+    margin: 0 auto 35px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #d9efff;
+
+    color: #0768b8;
+
+    font-size: 45px;
+
+    font-weight: 700;
+
+}
+
+.verification-card h1 {
+
+    color: #102139;
+
+    font-size: 56px;
+
+    letter-spacing: -1.7px;
+
+    margin-bottom: 19px;
+
+}
+
+.verification-subtitle {
+
+    color: #60728a;
+
+    font-size: 22px;
+
+    line-height: 1.65;
+
+    max-width: 720px;
+
+    margin: 0 auto 45px;
+
+}
+
+/* Sending summary */
+
+.sending-box {
+
+    text-align: left;
+
+    background: #edf5fc;
+
+    border-radius: 11px;
+
+    padding: 29px 32px;
+
+    margin-bottom: 42px;
+
+}
+
+.sending-box > span {
+
+    display: block;
+
+    color: #63758b;
+
+    font-size: 18px;
+
+    margin-bottom: 16px;
+
+}
+
+.sending-box > div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+.sending-box strong {
+
+    color: #11233b;
+
+    font-size: 27px;
+
+}
+
+/* Verification input */
+
+.verification-field {
+
+    text-align: left;
+
+    margin-bottom: 28px;
+
+}
+
+.verification-field label {
+
+    display: block;
+
+    color: #13243a;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+.otp-input-wrapper {
+
+    width: 100%;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    border: 2px solid #bcd3e7;
+
+    background: white;
+
+    border-radius: 11px;
+
+    padding: 0 22px;
+
+    box-shadow:
+
+        0 2px 7px rgba(24,69,105,0.08);
+
+}
+
+.otp-input-wrapper > span {
+
+    color: #60758b;
+
+    font-size: 26px;
+
+    margin-right: 18px;
+
+}
+
+.otp-input-wrapper input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: #17304d;
+
+    font-size: 25px;
+
+    letter-spacing: 7px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+}
+
+.otp-input-wrapper input::placeholder {
+
+    color: #60758b;
+
+    letter-spacing: 6px;
+
+}
+
+/* Verify button */
+
+.verify-button {
+
+    width: 100%;
+
+    height: 67px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: #75aadb;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    box-shadow:
+
+        0 4px 10px rgba(40,104,158,0.12);
+
+}
+
+.verify-button:hover {
+
+    background: #659bcf;
+
+}
+
+.verification-message {
+
+    min-height: 22px;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #c33b3b;
+
+}
+
+/* Verification bottom nav */
+
+.verification-bottom-nav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 95px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    background: rgba(255,255,255,0.97);
+
+    border-top: 1px solid #d9e3eb;
+
+    z-index: 50;
+
+}
+
+.verification-bottom-nav a {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    color: #566b82;
+
+}
+
+.verification-bottom-nav a span {
+
+    font-size: 30px;
+
+}
+
+.verification-bottom-nav a small {
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+}
+
+/* =========================================================
+
+   RESPONSIVE
+
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-topbar,
+
+    .transfer-header,
+
+    .verification-header {
+
+        height: 72px;
+
+        padding: 0 17px;
+
+    }
+
+    .dashboard-brand strong,
+
+    .verification-brand strong {
+
+        font-size: 19px;
+
+    }
+
+    .small-logo,
+
+    .verification-logo {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+    .dashboard-content {
+
+        padding: 24px 22px 30px;
+
+    }
+
+    .greeting h1 {
+
+        font-size: 29px;
+
+    }
+
+    .greeting p {
+
+        font-size: 17px;
+
+    }
+
+    .greeting span {
+
+        font-size: 14px;
+
+    }
+
+    .chat-edit {
+
+        position: static;
+
+        margin-left: auto;
+
+        margin-bottom: 17px;
+
+        display: block;
+
+        height: 47px;
+
+        font-size: 13px;
+
+    }
+
+    .balance-card {
+
+        padding: 25px 22px;
+
+    }
+
+    .balance-card > h2 {
+
+        font-size: 37px;
+
+    }
+
+    .action-circle {
+
+        width: 59px;
+
+        height: 59px;
+
+        border-radius: 17px;
+
+    }
+
+    .transfer-content {
+
+        padding: 25px 17px 35px;
+
+    }
+
+    .transfer-title h1 {
+
+        font-size: 28px;
+
+    }
+
+    .transfer-form {
+
+        padding: 21px 17px;
+
+    }
+
+    .verification-content {
+
+        padding: 25px 16px 30px;
+
+    }
+
+    .verification-card {
+
+        padding: 30px 20px;
+
+    }
+
+    .security-circle {
+
+        width: 86px;
+
+        height: 86px;
+
+        font-size: 34px;
+
+        margin-bottom: 27px;
+
+    }
+
+    .verification-card h1 {
+
+        font-size: 37px;
+
+    }
+
+    .verification-subtitle {
+
+        font-size: 17px;
+
+        line-height: 1.55;
+
+        margin-bottom: 30px;
+
+    }
+
+    .sending-box {
+
+        padding: 22px;
+
+        margin-bottom: 30px;
+
+    }
+
+    .sending-box strong {
+
+        font-size: 19px;
+
+    }
+
+    .sending-box > span {
+
+        font-size: 15px;
+
+    }
+
+    .verification-field label {
+
+        font-size: 16px;
+
+    }
+
+    .otp-input-wrapper {
+
+        height: 60px;
+
+        padding: 0 14px;
+
+    }
+
+    .otp-input-wrapper input {
+
+        font-size: 19px;
+
+        letter-spacing: 4px;
+
+    }
+
+    .otp-input-wrapper input::placeholder {
+
+        letter-spacing: 3px;
+
+    }
+
+    .verify-button {
+
+        height: 58px;
+
+        font-size: 17px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .login-page {
+
+        padding: 17px 15px 25px;
+
+    }
+
+    .login-brand {
+
+        margin-bottom: 20px;
+
+    }
+
+    .login-logo {
+
+        width: 64px;
+
+        height: 64px;
+
+    }
+
+    .login-brand h1 {
+
+        font-size: 25px;
+
+    }
+
+    .login-welcome h2 {
+
+        font-size: 27px;
+
+    }
+
+    .login-box {
+
+        padding: 20px 15px;
+
+    }
+
+    .dashboard-content {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+
+    }
+
+    .balance-card {
+
+        border-radius: 20px;
+
+    }
+
+    .account-cards {
+
+        gap: 10px;
+
+    }
+
+    .mini-card {
+
+        padding: 14px;
+
+    }
+
+    .quick-actions {
+
+        gap: 5px;
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+    }
+
+    .action-circle {
+
+        width: 54px;
+
+        height: 54px;
+
+        font-size: 22px;
+
+    }
+
+    .quick-action {
+
+        font-size: 11px;
+
+    }
+
+    .nav-item span {
+
+        font-size: 21px;
+
+    }
+
+    .nav-item small {
+
+        font-size: 9px;
+
+    }
+
+    .two-columns {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+    .transfer-tabs {
+
+        font-size: 13px;
+
+    }
+
+    .transfer-tab {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* =========================================================
+
+   VERY SMALL PHONES
+
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .balance-card > h2 {
+
+        font-size: 32px;
+
+    }
+
+    .greeting h1 {
+
+        font-size: 26px;
+
+    }
+
+    .mini-card {
+
+        min-height: 95px;
+
+    }
+
+    .mini-card span {
+
+        font-size: 13px;
+
+    }
+
+    .mini-card small {
+
+        font-size: 10px;
+
+    }
+
+    .action-circle {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+    .quick-action {
+
+        font-size: 10px;
+
+    }
+
+}
+
+
+/* MULTI-STEP DEMO VERIFICATION */
+
+.demo-step-counter {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 7px 14px;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    background: #eaf4fc;
+
+    color: #0765ad;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+.demo-step-counter span {
+
+    margin-left: 4px;
+
+}
+
+.verification-card {
+
+    transition: opacity 0.2s ease;
+
+}
+
+.verification-message {
+
+    min-height: 24px;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+.verify-button:disabled {
+
+    cursor: default;
+
+    opacity: 0.9;
+
+}
+
+@media (max-width: 700px) {
+
+    .demo-step-counter {
+
+        font-size: 12px;
+
+        padding: 6px 12px;
+
+    }
+
+}
+
+
+/* =========================
+
+   GENERAL PAGE
+
+========================= */
+
+.app {
+
+    min-height: 100vh;
+
+    background: #f5f7fa;
+
+    color: #172b4d;
+
+}
+
+.page-header {
+
+    height: 70px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    border-bottom: 1px solid #edf0f4;
+
+}
+
+.back {
+
+    text-decoration: none;
+
+    color: #063b82;
+
+    font-size: 35px;
+
+    margin-right: 15px;
+
+}
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-weight: 700;
+
+    color: #063b82;
+
+}
+
+.brand img {
+
+    width: 36px;
+
+    height: 36px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+}
+
+.page-content {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 25px 18px 110px;
+
+}
+
+.page-content h1 {
+
+    margin: 0;
+
+    font-size: 27px;
+
+}
+
+.subtitle {
+
+    color: #7c8798;
+
+    margin-top: 7px;
+
+    margin-bottom: 22px;
+
+}
+
+/* =========================
+
+   ACCOUNT
+
+========================= */
+
+.account-box {
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,.05);
+
+}
+
+.account-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.account-top span {
+
+    color: #7d8796;
+
+    font-size: 13px;
+
+}
+
+.account-top h2 {
+
+    margin: 7px 0 0;
+
+    font-size: 27px;
+
+}
+
+.account-symbol {
+
+    width: 44px;
+
+    height: 44px;
+
+    background: #edf4ff;
+
+    color: #063b82;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.account-info {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    border-top: 1px solid #edf0f4;
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+}
+
+.account-info small {
+
+    display: block;
+
+    color: #929baa;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+
+}
+
+.account-info strong {
+
+    font-size: 12px;
+
+}
+
+.account-links {
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    margin: 18px 0;
+
+}
+
+.account-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 16px;
+
+    text-decoration: none;
+
+    color: #172b4d;
+
+    border-bottom: 1px solid #edf0f4;
+
+}
+
+.account-links a:last-child {
+
+    border-bottom: 0;
+
+}
+
+.account-links strong {
+
+    display: block;
+
+    font-size: 14px;
+
+}
+
+.account-links small {
+
+    color: #8993a2;
+
+}
+
+.account-links span:last-child {
+
+    margin-left: auto;
+
+    font-size: 24px;
+
+}
+
+.link-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: #edf4ff;
+
+    color: #063b82;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.section-title {
+
+    margin-top: 25px;
+
+}
+
+.demo-card {
+
+    background: linear-gradient(135deg, #063b82, #1764bd);
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 22px;
+
+    min-height: 150px;
+
+    box-shadow: 0 10px 25px rgba(6,59,130,.2);
+
+}
+
+.card-top,
+
+.card-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.card-number {
+
+    margin-top: 45px;
+
+    letter-spacing: 2px;
+
+}
+
+.card-bottom {
+
+    margin-top: 25px;
+
+    font-size: 11px;
+
+}
+
+.card-history {
+
+    display: block;
+
+    text-align: right;
+
+    margin-top: 12px;
+
+    color: #063b82;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+/* =========================
+
+   TRANSACTIONS
+
+========================= */
+
+.balance-summary {
+
+    background: #063b82;
+
+    color: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+}
+
+.balance-summary span {
+
+    display: block;
+
+    font-size: 13px;
+
+}
+
+.balance-summary strong {
+
+    display: block;
+
+    font-size: 28px;
+
+    margin: 8px 0;
+
+}
+
+.balance-summary small {
+
+    opacity: .75;
+
+}
+
+.month-title {
+
+    color: #687386;
+
+    font-size: 13px;
+
+    margin: 25px 0 10px;
+
+}
+
+.transaction {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 14px;
+
+    margin-bottom: 10px;
+
+}
+
+.transaction-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+}
+
+.transaction-details {
+
+    flex: 1;
+
+}
+
+.transaction-details strong {
+
+    display: block;
+
+    font-size: 13px;
+
+}
+
+.transaction-details span,
+
+.transaction-details small {
+
+    display: block;
+
+    color: #8993a2;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+
+}
+
+.green {
+
+    background: #e8f7ee;
+
+    color: #168447;
+
+}
+
+.red {
+
+    background: #fff0f0;
+
+    color: #d64545;
+
+}
+
+.purple {
+
+    background: #f1edff;
+
+    color: #694dcc;
+
+}
+
+.positive {
+
+    color: #168447;
+
+    font-size: 12px;
+
+}
+
+.negative {
+
+    color: #d64545;
+
+    font-size: 12px;
+
+}
+
+/* =========================
+
+   FORMS
+
+========================= */
+
+.form-card {
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,.05);
+
+}
+
+.form-card label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin: 16px 0 7px;
+
+}
+
+.form-card label:first-child {
+
+    margin-top: 0;
+
+}
+
+.form-card input,
+
+.form-card select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dce1e8;
+
+    border-radius: 11px;
+
+    padding: 14px;
+
+    font-size: 14px;
+
+    background: #ffffff;
+
+    outline: none;
+
+}
+
+.form-card input:focus,
+
+.form-card select:focus {
+
+    border-color: #1764bd;
+
+}
+
+.money-input {
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #dce1e8;
+
+    border-radius: 11px;
+
+    padding: 0 14px;
+
+}
+
+.money-input span {
+
+    font-weight: 700;
+
+}
+
+.money-input input {
+
+    border: 0;
+
+    padding-left: 8px;
+
+}
+
+.main-button {
+
+    width: 100%;
+
+    margin-top: 22px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    background: #063b82;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+.form-message {
+
+    text-align: center;
+
+    color: #168447;
+
+    font-size: 13px;
+
+    margin-top: 15px;
+
+    line-height: 1.6;
+
+}
+
+/* =========================
+
+   DEMO NOTICE
+
+========================= */
+
+.demo-notice {
+
+    text-align: center;
+
+    background: #fff8e7;
+
+    color: #80631b;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    margin-top: 25px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+}
+
+/* =========================
+
+   BOTTOM NAVIGATION
+
+========================= */
+
+.bottom-nav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 70px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e7eaf0;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    z-index: 100;
+
+}
+
+.bottom-nav a {
+
+    text-decoration: none;
+
+    color: #8a94a6;
+
+    text-align: center;
+
+    font-size: 20px;
+
+}
+
+.bottom-nav a small {
+
+    display: block;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+
+}
+
+.bottom-nav a.active {
+
+    color: #063b82;
+
+}
+

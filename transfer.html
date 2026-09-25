@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+
+        name="viewport"
+
+        content="width=device-width, initial-scale=1.0"
+
+    >
+
+    <meta
+
+        name="theme-color"
+
+        content="#063b82"
+
+    >
+
+    <title>
+
+        citiymobile bank — Transfer
+
+    </title>
+
+    <link
+
+        rel="manifest"
+
+        href="manifest.json"
+
+    >
+
+    <link
+
+        rel="stylesheet"
+
+        href="style.css"
+
+    >
+
+</head>
+
+<body class="transfer-page">
+
+    <!-- HEADER -->
+
+    <header class="transfer-header">
+
+        <div class="dashboard-brand">
+
+            <div class="small-logo">
+
+                <img
+
+                    src="logo.jpg"
+
+                    alt="citiymobile bank"
+
+                >
+
+            </div>
+
+            <strong>
+
+                Citiy Bank
+
+            </strong>
+
+            
+
+        </div>
+
+
+    </header>
+
+    <!-- CONTENT -->
+
+    <main class="transfer-content">
+
+        <section class="transfer-title">
+
+            <h1>
+
+                Transfer Money
+
+            </h1>
+
+            <p>
+
+                Send a transfer to another account.
+
+            </p>
+
+        </section>
+
+        <!-- TABS -->
+
+        <div class="transfer-tabs">
+
+            <button
+
+                type="button"
+
+                class="transfer-tab active"
+
+            >
+
+                External Transfer
+
+            </button>
+
+            <button
+
+                type="button"
+
+                class="transfer-tab"
+
+            >
+
+                Internal Transfer
+
+            </button>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form
+
+            id="transferForm"
+
+            class="transfer-form"
+
+        >
+
+            <div class="form-field">
+
+                <label for="sourceAccount">
+
+                    From Account
+
+                </label>
+
+                <select
+
+                    id="sourceAccount"
+
+                    required
+
+                >
+
+                    <option value="">
+
+                        Select source account
+
+                    </option>
+
+                    <option value="Joint Account">
+
+                        Joint Account — $2,100,000.00
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-field">
+
+                <label for="recipient">
+
+                    Recipient Full Name
+
+                </label>
+
+                <input
+
+                    type="text"
+
+                    id="recipient"
+
+                    placeholder="John Doe"
+
+                    required
+
+                >
+
+            </div>
+
+            <div class="form-field">
+
+                <label for="bankName">
+
+                    Recipient Bank Name
+
+                </label>
+
+                <input
+
+                    type="text"
+
+                    id="bankName"
+
+                    placeholder="e.g. First National Bank"
+
+                    required
+
+                >
+
+            </div>
+
+            <div class="one-columns">
+
+                <div class="form-field">
+
+                    <label for="accountNumber">
+
+                        Account Number
+
+                    </label>
+
+                    <input
+
+                        type="text"
+
+                        id="accountNumber"
+
+                        placeholder="0001234567"
+
+                        required
+
+                    >
+
+                </div>
+
+                
+            <div class="form-field">
+
+                <label for="amount">
+
+                    Amount
+
+                </label>
+
+                <div class="amount-input">
+
+                    <span>
+
+                        $
+
+                    </span>
+
+                    <input
+
+                        type="number"
+
+                        id="amount"
+
+                        placeholder="0.00"
+
+                        min="1"
+
+                        step="0.01"
+
+                        required
+
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="form-field">
+
+                <label for="description">
+
+                    Description
+
+                </label>
+
+                <input
+
+                    type="text"
+
+                    id="description"
+
+                    placeholder="Transfer description"
+
+                >
+
+            </div>
+
+            <button
+
+                type="submit"
+
+                class="continue-transfer"
+
+            >
+
+                Continue
+
+                <span>
+
+                    →
+
+                </span>
+
+            </button>
+
+        </form>
+
+        <div class="transfer-demo-notice">
+
+            
+
+        </div>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+        <a
+
+            href="dashboard.html"
+
+            class="nav-item"
+
+        >
+
+            <span>
+
+                ⌂
+
+            </span>
+
+            <small>
+
+                Home
+
+            </small>
+
+        </a>
+
+        <button
+
+            class="nav-item"
+
+            onclick="demoFeature('Accounts')"
+
+        >
+
+            <span>
+
+                ▣
+
+            </span>
+
+            <small>
+
+                Accounts
+
+            </small>
+
+        </button>
+
+        <a
+
+            href="transfer.html"
+
+            class="nav-item active"
+
+        >
+
+            <span>
+
+                ⇄
+
+            </span>
+
+            <small>
+
+                Transfer
+
+            </small>
+
+        </a>
+
+        <button
+
+            class="nav-item"
+
+            onclick="viewTransactions()"
+
+        >
+
+            <span>
+
+                $
+
+            </span>
+
+            <small>
+
+                Transactions
+
+            </small>
+
+        </button>
+
+        <button
+
+            class="nav-item"
+
+            onclick="demoFeature('More')"
+
+        >
+
+            <span>
+
+                ▦
+
+            </span>
+
+            <small>
+
+                More
+
+            </small>
+
+        </button>
+
+    </nav>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

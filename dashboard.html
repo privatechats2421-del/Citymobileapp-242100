@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+
+        name="viewport"
+
+        content="width=device-width, initial-scale=1.0"
+
+    >
+
+    <meta
+
+        name="theme-color"
+
+        content="#063b82"
+
+    >
+
+    <title>Citiy Bank — Home</title>
+
+    <link
+
+        rel="manifest"
+
+        href="manifest.json"
+
+    >
+
+    <link
+
+        rel="stylesheet"
+
+        href="style.css"
+
+    >
+
+</head>
+
+<body class="bank-dashboard">
+
+    <!-- HEADER -->
+
+    <header class="dashboard-topbar">
+
+        <div class="dashboard-brand">
+
+            <div class="small-logo">
+
+                <img
+
+                    src="logo.jpg"
+
+                    alt="citiymobile bank"
+
+                >
+
+            </div>
+
+            <strong>
+
+                Citiy Bank
+
+            </strong>
+
+        </div>
+
+        <button
+
+            class="logout-button"
+
+            onclick="logoutUser()"
+
+            aria-label="Logout"
+
+        >
+
+            ↪
+
+        </button>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="dashboard-content">
+
+        <!-- GREETING -->
+
+        <section class="greeting">
+
+            <p>
+
+                Welcome back,
+
+            </p>
+
+            <h1>
+
+                Hi, JohnnyMaria
+
+            </h1>
+
+            <span>
+
+                Here's your account overview.
+
+            </span>
+
+        </section>
+
+        <!-- BALANCE -->
+
+        <section class="balance-card">
+
+            <p>
+
+                Total Balance
+
+            </p>
+
+            <h2>
+
+                $2,100,000.00
+
+            </h2>
+
+            <div class="account-cards">
+
+                <div class="mini-card">
+
+                    <span>
+
+                        Checking
+
+                    </span>
+
+                    <strong>
+
+                        $1,***,000
+
+                    </strong>
+
+                    <small>
+
+                        ------
+
+                    </small>
+
+                </div>
+
+                <div class="mini-card">
+
+                    <span>
+
+                        Savings
+
+                    </span>
+
+                    <strong>
+
+                        $1,***,000
+
+                    </strong>
+
+                    <small>
+
+                        ------
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="quick-actions">
+
+            <!-- TRANSFER -->
+
+            <a
+
+                href="transfer.html"
+
+                class="quick-action"
+
+            >
+
+                <div class="action-circle blue">
+
+                    ➤
+
+                </div>
+
+                <span>
+
+                    Transfer
+
+                </span>
+
+            </a>
+
+            <!-- DEPOSIT -->
+
+            <a
+
+                href="deposit.html"
+
+                class="quick-action"
+
+            >
+
+                <div class="action-circle green">
+
+                    ↓
+
+                </div>
+
+                <span>
+
+                    Deposit
+
+                </span>
+
+            </a>
+
+            <!-- PAY BILLS -->
+
+            <a
+
+                href="pay-bills.html"
+
+                class="quick-action"
+
+            >
+
+                <div class="action-circle purple">
+
+                    $
+
+                </div>
+
+                <span>
+
+                    Pay Bills
+
+                </span>
+
+            </a>
+
+            <!-- HELP AND SUPPORT-->
+
+            <button
+
+                type="button"
+
+                class="quick-action"
+
+                onclick="demoFeature('Apply Card')"
+
+            >
+
+                <div class="action-circle red">
+
+                    ▭
+
+                </div>
+
+                <span>
+
+                    Help and Support
+
+                </span>
+
+            </button>
+
+        </section>
+
+        <!-- RECENT TRANSACTIONS -->
+
+        <section class="recent-header">
+
+            <h2>
+
+                Recent Transactions
+
+            </h2>
+
+            <a
+
+                href="transactions.html"
+
+                class="view-all-button"
+
+            >
+
+                View all
+
+            </a>
+
+        </section>
+
+        <section class="transaction-container">
+
+            <div class="transaction-row">
+
+                <div class="transaction-icon">
+
+                    ↓
+
+                </div>
+
+                <div class="transaction-info">
+
+                    <strong>
+
+                        Account Deposit
+
+                    </strong>
+
+                    <span>
+
+                        23 September 2021
+
+                    </span>
+
+                </div>
+
+                <strong class="positive">
+
+                    +$25,000.00
+
+                </strong>
+
+            </div>
+
+            <div class="transaction-row">
+
+                <div class="transaction-icon">
+
+                    ↑
+
+                </div>
+
+                <div class="transaction-info">
+
+                    <strong>
+
+                         Transfer
+
+                    </strong>
+
+                    <span>
+
+                        22 September 2021
+
+                    </span>
+
+                </div>
+
+                <strong class="negative">
+
+                    -$500.00
+
+                </strong>
+
+            </div>
+       <div class="transaction-row">
+
+                <div class="transaction-icon">
+
+                    ↑
+
+                </div>
+
+                <div class="transaction-info">
+
+                    <strong>
+
+                         Bill Payment
+
+                    </strong>
+
+                    <span>
+
+                        22 September 2021
+
+                    </span>
+
+                </div>
+
+                <strong class="negative">
+
+                    -$120.00
+
+                </strong>
+
+            </div>
+       <div class="transaction-row">
+
+                <div class="transaction-icon">
+
+                    ↑
+
+                </div>
+
+                <div class="transaction-info">
+
+                    <strong>
+
+                       Deposit 
+
+                    </strong>
+
+                    <span>
+
+                        22 September 2021
+
+                    </span>
+
+                </div>
+
+                <strong class="positive">
+
+                    +$1000.00
+
+                </strong>
+
+            </div>
+       <div class="transaction-row">
+
+                <div class="transaction-icon">
+
+                    ↑
+
+                </div>
+
+                <div class="transaction-info">
+
+                    <strong>
+
+                        Transfer
+
+                    </strong>
+
+                    <span>
+
+                        12 September 2021
+
+                    </span>
+
+                </div>
+
+                <strong class="negative">
+
+                    -$500.00
+
+                </strong>
+
+            </div>
+       <div class="transaction-row">
+
+                <div class="transaction-icon">
+
+                    ↑
+
+                </div>
+
+                <div class="transaction-info">
+
+                    <strong>
+
+                        Deposit
+
+                    </strong>
+
+                    <span>
+
+                        10 September 2026
+
+                    </span>
+
+                </div>
+
+                <strong class="positive">
+
+                    +$1,000,000,00.00
+
+                </strong>
+
+            </div>
+       <div class="transaction-row">
+
+                <div class="transaction-icon">
+
+                    ↑
+
+                </div>
+
+                <div class="transaction-info">
+
+                    <strong>
+
+                         Transfer
+
+                    </strong>
+
+                    <span>
+
+                        3 September 2026
+
+                    </span>
+
+                </div>
+
+                <strong class="negative">
+
+                    -$500.00
+
+                </strong>
+
+            </div>
+
+        </section>
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+        <!-- HOME -->
+
+        <a
+
+            href="dashboard.html"
+
+            class="nav-item active"
+
+        >
+
+            <span>
+
+                ⌂
+
+            </span>
+
+            <small>
+
+                Home
+
+            </small>
+
+        </a>
+
+        <!-- ACCOUNTS -->
+
+        <a
+
+            href="account.html"
+
+            class="nav-item"
+
+        >
+
+            <span>
+
+                ▣
+
+            </span>
+
+            <small>
+
+                Accounts
+
+            </small>
+
+        </a>
+
+        <!-- TRANSFER -->
+
+        <a
+
+            href="transfer.html"
+
+            class="nav-item"
+
+        >
+
+            <span>
+
+                ⇄
+
+            </span>
+
+            <small>
+
+                Transfer
+
+            </small>
+
+        </a>
+
+        <!-- TRANSACTIONS -->
+
+        <a
+
+            href="transactions.html"
+
+            class="nav-item"
+
+        >
+
+            <span>
+
+                $
+
+            </span>
+
+            <small>
+
+                Transactions
+
+            </small>
+
+        </a>
+
+        <!-- MORE -->
+
+        <button
+
+            type="button"
+
+            class="nav-item"
+
+            onclick="demoFeature('More')"
+
+        >
+
+            <span>
+
+                ▦
+
+            </span>
+
+            <small>
+
+                More
+
+            </small>
+
+        </button>
+
+    </nav>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

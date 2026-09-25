@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+
+        name="viewport"
+
+        content="width=device-width, initial-scale=1.0"
+
+    >
+
+    <title>Pay Bills | CitiyMobile</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="page-header">
+
+        <a href="dashboard.html" class="back">‹</a>
+
+        <div class="brand">
+
+            <img src="logo.jpg" alt="CitiyMobile">
+
+            <span>Citiy Bank</span>
+
+        </div>
+
+    </header>
+
+    <main class="page-content">
+
+        <h1>Pay Bills</h1>
+
+        <p class="subtitle">
+
+            Pay a bill using your account
+
+        </p>
+
+        <div class="form-card">
+
+            <form id="billForm">
+
+                <label>Bill Type</label>
+
+                <select id="billType" required>
+
+                    <option value="">
+
+                        Select bill type
+
+                    </option>
+
+                    <option value="Electricity">
+
+                        Electricity
+
+                    </option>
+
+                    <option value="Internet">
+
+                        Internet
+
+                    </option>
+
+                    <option value="Water">
+
+                        Water
+
+                    </option>
+
+                    <option value="Phone">
+
+                        Phone
+
+                    </option>
+
+                    <option value="Cable TV">
+
+                        Cable TV
+
+                    </option>
+
+                </select>
+
+                <label>Biller</label>
+
+                <input
+
+                    type="text"
+
+                    id="biller"
+
+                    placeholder="Enter biller name"
+
+                    required
+
+                >
+
+                <label>Customer / Account Reference</label>
+
+                <input
+
+                    type="text"
+
+                    id="customerReference"
+
+                    placeholder="Enter reference"
+
+                    required
+
+                >
+
+                <label>Amount</label>
+
+                <div class="money-input">
+
+                    <span>$</span>
+
+                    <input
+
+                        type="number"
+
+                        id="billAmount"
+
+                        placeholder="0.00"
+
+                        min="1"
+
+                        step="0.01"
+
+                        required
+
+                    >
+
+                </div>
+
+                <label>Pay From</label>
+
+                <select id="paymentAccount" required>
+
+                    <option value="">
+
+                        Select account
+
+                    </option>
+
+                    <option value="Joint Account">
+
+                        Joint Account — $2,100,000.00
+
+                    </option>
+
+                    <option value="Savings Account">
+
+                        Savings Account — $1,000,000.00
+
+                    </option>
+
+                </select>
+
+                <button type="submit" class="main-button">
+
+                    Continue
+
+                </button>
+
+            </form>
+
+
+    </main>
+
+    <nav class="bottom-nav">
+
+        <a href="dashboard.html">
+
+            <span>⌂</span>
+
+            <small>Home</small>
+
+        </a>
+
+        <a href="account.html">
+
+            <span>◯</span>
+
+            <small>Account</small>
+
+        </a>
+
+        <a href="transactions.html">
+
+            <span>↔</span>
+
+            <small>Transactions</small>
+
+        </a>
+
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

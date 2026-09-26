@@ -3165,3 +3165,64 @@ a {
 
 }
 
+/* QUICK ACTION ICONS - MAKE THEM CLEAR */
+
+.quick-actions .action-circle {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff !important;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+}
+
+/* Deposit */
+
+.quick-actions .action-circle.green {
+
+    background: #16b981;
+
+    color: #ffffff !important;
+
+}
+
+/* Pay Bills */
+
+.quick-actions .action-circle.purple {
+
+    background: #6258df;
+
+    color: #ffffff !important;
+
+}
+
+/* Help and Support */
+
+.quick-actions .action-circle.red {
+
+    background: #ef4264;
+
+    color: #ffffff !important;
+
+}
+
+/* Transfer */
+
+.quick-actions .action-circle.blue {
+
+    background: #087aca;
+
+    color: #ffffff !important;
+
+}
+
+

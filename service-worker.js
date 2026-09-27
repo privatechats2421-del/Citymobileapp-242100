@@ -35,7 +35,10 @@ const APP_FILES = [
 
     "./manifest.json",
 
-    "./logo.jpg"
+    "./logo.jpg",
+      "./icon-192.png",
+
+    "./icon-512.png"
 
 ];
 
